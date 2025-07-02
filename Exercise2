@@ -1,0 +1,8 @@
+
+public class Exercise2 {
+    public static void main(String[] args) {
+        String name = "Danny";
+        String position = "Park Manager";
+        System.out.println("My Name is " + name + " and I am a " + position + " ");
+    }
+}
