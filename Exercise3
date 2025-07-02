@@ -1,0 +1,7 @@
+public class Exercise3 {
+    public static void main(String[] args) {
+        String OpenHours = "8:00 AM";
+        String CloseHours = "8:00 PM";
+        System.out.println("The Park is Open at " + OpenHours + " and We're Closed at " + CloseHours + "  ");
+    }
+}
