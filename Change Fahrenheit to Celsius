@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CalculateFahrenheitToCelcius {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        //This program will ask the user to enter the temperature in Fahrenheit and it convert it to Celsius.
+
+        System.out.println("Enter the Temperature in Fahrenheit :");
+
+        double Far = scanner.nextDouble();
+
+        double Celsius = (Far - 32) * 5/9;
+
+        System.out.println("The Temperature in Celsius will be :" + Celsius);
+
+        scanner.close();
+
+    }
+}
