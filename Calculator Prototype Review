@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+//This program is the Calculator Prototype
+public class CalculatorPrototype {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the First Number1 : ");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Enter the Second Number2 : ");
+        double num2 = scanner.nextDouble();
+
+        double sum = num1 + num2;
+        double diff = num1 - num2;
+        double product = num1 * num2;
+        double fraction = num2 / num2;
+
+        System.out.println("Result: ");
+        System.out.println("sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + product);
+        System.out.println("Fraction: " + fraction);
+
+        scanner.close();
+    }
+
+}
