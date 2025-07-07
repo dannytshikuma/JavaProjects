@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class AgeCalculationinMonths {
+    public static void main(String[] args) {
+        // Step 1: Create a scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Step 2: Prompt for name
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Step 3: Prompt for age in years
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Step 4: Calculate age in months
+        int months = age * 12;
+
+        // Step 5: Print greeting and result
+        System.out.println("Hello " + name + ", your age in months is: " + months);
+
+        // Close the scanner (good practice)
+        scanner.close();
+    }
+}
