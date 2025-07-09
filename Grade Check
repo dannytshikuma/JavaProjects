@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class GradeCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please Enter Your Grade: ");
+
+        double grade = scanner.nextDouble();
+
+        if(grade >= 90){
+            System.out.println("Your Grade is A");
+        }
+        else if(grade >=80){
+            System.out.println("Your Grade is B");
+        }
+        else if(grade >= 70){
+            System.out.println("Your Grade is C");
+        }
+        else{
+            System.out.println("Your Grade is F, You failed.");
+        }
+        scanner.close();
+    }
+}
