@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+/*This program will ask a user to Enter the age, then it will check
+the conditions to see if the user is eligible to vote or not.*/
+
+
+public class NestedCheckAge {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Please Enter your Age:");
+        int age = scanner.nextInt();
+
+        if(age >= 18) {
+            System.out.println("You are Eligible to vote!");
+        }
+        else {
+            if(age >= 16 && age <18){
+                System.out.println("You cannot vote, but you can pre-register!");
+            }
+            else{
+                System.out.println("You are too young to vote.");
+            }
+        }
+        scanner.close();
+    }
+}
