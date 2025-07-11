@@ -1,0 +1,70 @@
+/* ---------------------------------------------------------------------------------------
+Write a Java program that:
+1.	Prompts the user for their age (as an integer).
+2.	Based on the age, apply the following discount logic using if-else if-else:
+•	Under 13 → "Child discount applies."
+•	13 to 17 → "Teen discount applies."
+•	18 to 64 → "Standard price."
+•	65 and over → "Senior discount applies."
+3.	Then, ask the user to select a day of the week using a number from 1 (Monday) to 7 (Sunday).
+4.	Use a switch statement to print the day's name.
+💡 Sample Input:
+1.	Enter your age:  
+2.	15  
+3.	Choose a day (1-7):  
+4.	6
+✅ Expected Output:
+1.	Teen discount applies.  
+2.	You selected: Saturday
+
+💡 Sample Input:
+1.	Enter your age:  
+2.	15
+3.	Choose a day (1-7):  
+4.	10
+✅ Expected Output:
+
+---------------------------------------------------------------------------------------*/
+
+import java.util.Scanner;
+
+public class DiscountAge {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your Age: ");
+        int age = scanner.nextInt();
+        if(age < 13){
+            System.out.println("Child Discount applies. ");
+        } else if(age >= 13 && age <= 17){
+            System.out.println("Teen Discount applies.");
+        } else if(age >= 18 && age <= 64){
+            System.out.println("Standard Price.");
+        }else {
+            System.out.println("Senior Discount applies. ");
+        }
+   System.out.println("Enter a Day of the Week: ");
+        int day = scanner.nextInt();
+
+        switch (day){
+
+            case 1 : System.out.println("It is Monday");
+            break;
+            case 2 : System.out.println("It is Tuesday");
+                break;
+            case 3 : System.out.println("It is Wednesday");
+                break;
+            case 4 : System.out.println("It is Thursday");
+                break;
+            case 5 : System.out.println("It is Fridayday");
+                break;
+            case 6 : System.out.println("It is Saturday");
+                break;
+            case 7 : System.out.println("It is Sunday");
+                break;
+            default: System.out.println("Invalid Day, Try again!!!");
+        }
+        scanner.close();
+    }
+}
