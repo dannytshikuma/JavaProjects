@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+/*-------------------------------------------------------------------------------
+| This Program requires the user some input then it will Calculate numbers that |
+| the users entered according to the operator that the user will choose         |
+------------------------------------------------------------------------------- */
+public class Calculator {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Enter the First Number1 : ");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Enter an Operator (+, -, *, /");
+
+        char operator = scanner.next().charAt(0);
+
+        System.out.println("Enter the Second Number2 : ");
+        double num2 = scanner.nextDouble();
+
+      double result;
+
+      switch (operator){
+
+          case '+' :
+              result = num1 + num2;
+              System.out.println("Result " + result);
+              break;
+
+          case '-' :
+              result = num1 - num2;
+              System.out.println("Result " + result);
+              break;
+
+          case '*' :
+              result = num1 * num2;
+              System.out.println("Result " + result);
+              break;
+          case '/' :
+
+              if(num2 != 0) {
+                  result = num1 / num2;
+                  System.out.println("Result " + result);
+              }else {
+                  System.out.println("Error divide by zero");
+              }
+              break;
+          default: System.out.println("Invalid Operator!");
+      }
+ scanner.close();
+    }
+}
