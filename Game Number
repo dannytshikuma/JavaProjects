@@ -19,7 +19,7 @@ public class GameNumber {
 
         do{
             System.out.println("Enter Your Guess Number: ");
-            System.out.println("The Number has to be between 1 to 100 ");
+            System.out.println("The Number has to be between 1 to 10 ");
             guess = scanner.nextInt();
             attempts++;
 
