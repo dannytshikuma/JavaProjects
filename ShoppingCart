@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+| The program ask user to enter number of items and then it will    |
+| also ask to enter the price of each item. then the program will   |
+| calculate the total price of the items                            |
+--------------------------------------------------------------------*/
+ 
+
+
+
+import java.util.Scanner;
+
+public class ShoppingCart {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Number of Items: ");
+        int ItemCount = scanner.nextInt();
+        double total = 0;
+        for(int i= 0; i<ItemCount; i++){
+
+            System.out.println("Enter Price of Items " + i + " : ");
+
+            double price = scanner.nextDouble();
+            total += price;
+        }
+        System.out.println("The Total Price : $ " + total);
+    scanner.close();
+    }
+}
