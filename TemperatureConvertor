@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class TemperatureConvertor {
+    public static void main(String[] args) {
+
+ Temperature(); // call the method here!
+
+
+    }
+/* This is the method for the temperature convertor with details.
+Convert from Fahrenheit to Celsius. the program will ask the user
+to enter the temperature in Fahrenheit and it will convert it to Celsius.
+*/
+    
+    public static void Temperature() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Degree in Fahrenheit and it will be convert to Celsius");
+        double fahrenheit = scanner.nextDouble();
+
+        double celsius = (fahrenheit - 32)*5/9;
+        System.out.println("The Degree in Fahrenheit " + fahrenheit + " in Celsius is " + celsius);
+
+    }
+}
