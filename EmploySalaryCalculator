@@ -1,0 +1,58 @@
+/**************************************************************************************************
+| The Program will calculate the employees Salary (Hourly, Weekly, Bi-Weekly, and Annually Salary. |
+| The program will ask the user to enter their hourly wage and the hours worked                    |
+****************************************************************************************************/
+
+import java.util.Scanner;
+
+public class EmploySalaryCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Your Hourly Wage : ");
+        double hourlyWage = scanner.nextDouble();
+
+        System.out.println("Enter Hours worked : ");
+        double hoursWorked = scanner.nextDouble();
+
+        double weeklySalary = 0;
+        if(weeklySalary > 40){
+            weeklySalary = CalculateweeklySalary(hourlyWage, hoursWorked, 1.5);
+        }else{
+            weeklySalary = CalculateweeklySalary(hourlyWage,hoursWorked);
+        }
+       double BiweeklySalary = weeklySalary * 2;
+
+        double AnnualSalary = CalculateAnnualSalary(weeklySalary);
+
+        System.out.printf(" Weekly Salary : % .2f\n ", weeklySalary);
+        System.out.printf(" Bi-Weekly Salary : % .2f\n ", BiweeklySalary);
+        System.out.printf(" Weekly Salary : % .2f\n ", AnnualSalary);
+
+    }
+    // Calculate Weekly Salary Without Overtime
+
+    public static double CalculateweeklySalary( double hourlyWage, double hoursWorked) {
+
+     return hourlyWage * hoursWorked;
+    }
+
+    // Calculate Weekly Salary With Overtime
+
+    public static double CalculateweeklySalary( double hourlyWage, double hoursWorked, double overtimeRate) {
+
+        double regularHours = Math.min(hoursWorked, 40);
+        double overtimeHours = Math.max(hoursWorked - 40, 0);
+
+        return (regularHours * hourlyWage) + (overtimeHours * hourlyWage * overtimeRate);
+    }
+
+    // Calculate Annual Salary base on Weekly Salary
+
+    public static double CalculateAnnualSalary(double WeeklySalary){
+
+        return WeeklySalary * 52; // 52 Weeks in the Year
+    }
+
+
+}
