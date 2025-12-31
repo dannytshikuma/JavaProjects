@@ -1,0 +1,25 @@
+We need to keep track of the dinosaurs in the park. Declare variables to represent the breed, 
+height, length, and weight of one dinosaur in the main method. Give the variables a value and 
+print them.
+
+String breed = T-Rex;
+double height = 12.3;
+double length = 20.2;
+double weight = 8000.0;
+
+System.out.println("Breed: " + breed);
+System.out.println("Height: " + height + "m");
+System.out.println("Length: " + leingth + "m");
+System.out.println("Weight: " + weight + "kg");
+
+ //Exercise 2
+        int age = 7;
+        String name = "Rexy";
+        boolean isCarnivore = true;
+
+        System.out.println("Name " + name);
+        System.out.println("Age " + age + " Years old");
+        System.out.println("Carnivore " + isCarnivore);
+        int MaxVisitors = 200;
+
+        System.out.println("There is Max number of Visitors that allow per Day : " + MaxVisitors);
